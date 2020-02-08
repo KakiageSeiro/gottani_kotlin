@@ -6,7 +6,20 @@
 </head>
 <body>
 
-ハローワールド！
+    <form action="/create" method="post">
+        name: <input type="text" name="name"><br>
+        text: <input type="text" name="text"><br>
+        <button type="submit">送信</button>
+    </form>
 
+    <br/>
+
+    <div class="tweets" th:each="tweet:${tweets}" th:object="${tweet}">
+        <table border="1">
+            <tr>
+                <td th:text="'名前：' + *{name} + ' 内容：' + *{text}"></td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
