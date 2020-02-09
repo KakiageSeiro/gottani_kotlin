@@ -16,6 +16,10 @@ public class Tweet {
     @Column(name = "text")
     private String text;
 
+    public Integer getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }

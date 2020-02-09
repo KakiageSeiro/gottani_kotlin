@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+
+    <h1>詳細画面</h1>
+    <p th:if="${existsTweet}" th:text="'名前：' + ${tweet.name} + ' 内容：' + ${tweet.text}"></p>
+    <p th:if="${!existsTweet}" th:text="ツイートがありません。。。"></p>
+
+</body>
+</html>
